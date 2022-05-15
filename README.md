@@ -1,6 +1,6 @@
 # Fork Test
 
-Playground for testing out how `fork()`, `pipe()`, and `exec()` work in C.
+Playground for testing out how `fork()`, `pipe()`, and `exec()` work in C
 
 ## forktest1
 
@@ -14,8 +14,13 @@ Each child sends a message through the pipe, which continues to get passed up un
 ### Idea:
 
 P - C1 - C2 - C3 - C4
+
 C4 sends "4" to C3 and exits
+
 C3 passes "4" to C2 and then sends "3" to C2 and exits
+
 C2 passes "4" and "3" to C1 and then sends "2" to C1 and exits
+
 C1 passes "4" and "3" and "2" to P and then sends "1" to P and exits
+
 P prints "4" and "3" and "2" and "1"
